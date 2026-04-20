@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Ski Life</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="scratch-style.css"/>
+</head>
+<body>
+
+<nav id="top-nav">
+  <a href="index.html">Back to Professional Site</a>
+  <a href="#intro">About</a>
+  <a href="#top-resorts">Top Resorts</a>
+  <a href="#video-anchor">Video</a>
+  <a href="#tableau-anchor">Data</a>
+  <a href="app.html">Mountain App</a>
+</nav>
+
+<div id="site-header">
+  <h1>My Ski Life</h1>
+  <p class="tagline">Fresh powder, steep lines, and the mountains of Utah and Colorado</p>
+</div>
+
+<div id="intro-section">
+  <a name="intro"></a>
+  <h2 class="section-head">Why I Ski</h2>
+  <img
+    src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=860&q=80"
+    alt="Ski slope in snowy mountains"
+    class="ski-img"
+  />
+  <p class="img-caption">A bluebird day on the mountain.</p>
+  <p>
+    There is nothing quite like clicking into your bindings at the top of a mountain, taking a breath of crisp alpine air,
+    and pointing your skis downhill. Skiing has been part of my life for years, and living near both Utah and Colorado
+    makes it easy to feed the obsession.
+  </p>
+  <p>
+    Whether it is a powder day floating through knee-deep snow or a spring afternoon when the whole
+    mountain feels like a party, skiing never gets old.
+  </p>
+</div>
+
+<div id="gear-section">
+  <div class="inner">
+    <a name="top-resorts"></a>
+    <h2 class="section-head">Top Resorts I Have Loved</h2>
+
+    <img
+      src="https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=860&q=80"
+      alt="Ski resort aerial view"
+      class="ski-img"
+    />
+    <p class="img-caption">Wide open bowls and tree runs.</p>
+
+    <ol class="resort-list">
+      <li>
+        <strong>Park City Mountain, Utah</strong>
+        <ul class="tips-list">
+          <li>World's largest ski resort by acreage</li>
+          <li>Great variety from beginner to expert terrain</li>
+          <li>Easy access from Salt Lake City</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Snowbird, Utah</strong>
+        <ul class="tips-list">
+          <li>Known for steep and challenging runs</li>
+          <li>Over 500 inches of snowfall per year</li>
+          <li>The tram is iconic and a must-ride</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Vail, Colorado</strong>
+        <ul class="tips-list">
+          <li>World-class back bowls stretching for miles</li>
+          <li>European-style village atmosphere</li>
+          <li>Great for multi-day trips</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Breckenridge, Colorado</strong>
+        <ul class="tips-list">
+          <li>Highest chairlift in North America</li>
+          <li>Charming town with great après-ski</li>
+          <li>Tons of terrain for all ability levels</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div id="video-section">
+  <a name="video-anchor" id="video-anchor"></a>
+  <h2 class="section-head">Watch: Epic Ski Edit</h2>
+  <p>If this does not make you want to book a trip, nothing will:</p>
+  <div class="video-wrap">
+    <iframe
+      src="https://www.youtube.com/embed/UbKbGMVH_3I"
+      title="Epic Skiing Colorado"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+<div id="tableau-section">
+  <div class="inner">
+    <a name="tableau-anchor" id="tableau-anchor"></a>
+    <h2 class="section-head">Ski Resort Data</h2>
+    <p style="color:#a0c4ff; margin-bottom:20px;">
+      Interactive visualization of ski resort statistics.
+    </p>
+    <div class='tableauPlaceholder' id='viz1' style='position:relative;width:100%;padding-bottom:60%;min-height:400px;'>
+      <noscript>
+        <a href='#'><img alt='Ski Data' src='https://public.tableau.com/static/images/SK/SKI/Dashboard1/1_rss.png' style='border:none'/></a>
+      </noscript>
+      <object class='tableauViz' style='position:absolute;top:0;left:0;width:100%;height:100%;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
+        <param name='embed_code_version' value='3'/>
+        <param name='site_root' value=''/>
+        <param name='name' value='SkiResortStats/Dashboard1'/>
+        <param name='tabs' value='no'/>
+        <param name='toolbar' value='yes'/>
+        <param name='animate_transition' value='yes'/>
+        <param name='display_static_image' value='yes'/>
+        <param name='display_spinner' value='yes'/>
+        <param name='display_overlay' value='yes'/>
+        <param name='display_count' value='yes'/>
+        <param name='language' value='en-US'/>
+      </object>
+    </div>
+    <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+  </div>
+</div>
+
+<div style="text-align:center; padding: 60px 20px;">
+  <h2 class="section-head">Ready to Explore?</h2>
+  <p style="color:#a0c4ff; margin-bottom:10px;">Check out my Colorado Mountains Photo Explorer</p>
+  <a href="app.html" class="app-link-btn">Launch Colorado Mountain Explorer</a>
+</div>
+
+<div id="page-footer">
+  <p>IS 201 Final Project · BYU Pre-Business · Scratch Page</p>
+  <p><a href="index.html" style="color:#4a9eff;">Back to Professional Site</a></p>
+</div>
+
+</body>
+</html>
