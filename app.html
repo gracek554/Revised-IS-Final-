@@ -34,7 +34,6 @@
       margin: 5px;
       border-radius: 20px;
       cursor: pointer;
-      font-size: 0.9rem;
     }
     .filter-btn:hover { background: #add8ff; }
     #gallery {
@@ -59,7 +58,7 @@
       object-fit: cover;
     }
     .card-info { padding: 12px; }
-    .card-info h3 { margin: 0 0 6px; font-size: 1rem; }
+    .card-info h3 { margin: 0 0 6px; }
     .card-info p { margin: 0; font-size: 0.85rem; color: #555; }
     #footer {
       background-color: #0a1628;
@@ -98,21 +97,21 @@
 
 <script>
   const places = [
-    { name: "Vail Ski Resort", location: "Vail, CO", category: "skiing", desc: "World famous back bowls and great terrain.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Vail_ski_area.jpg/640px-Vail_ski_area.jpg" },
-    { name: "Breckenridge", location: "Breckenridge, CO", category: "skiing", desc: "Highest chairlift in North America.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Breckenridge_Ski_Resort.jpg/640px-Breckenridge_Ski_Resort.jpg" },
-    { name: "Maroon Bells", location: "Aspen, CO", category: "hiking", desc: "Most photographed mountains in North America.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Maroon_Bells_Edit_2.jpg/640px-Maroon_Bells_Edit_2.jpg" },
-    { name: "Rocky Mountain NP", location: "Estes Park, CO", category: "hiking", desc: "Stunning national park with amazing wildlife.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Rocky_Mountain_National_Park_in_September_2011_-_Glacier_Gorge.jpg/640px-Rocky_Mountain_National_Park_in_September_2011_-_Glacier_Gorge.jpg" },
-    { name: "Mount Elbert", location: "Leadville, CO", category: "peaks", desc: "Highest peak in the Rocky Mountains at 14,439 ft.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Mount_Elbert.jpg/640px-Mount_Elbert.jpg" },
-    { name: "Pikes Peak", location: "Colorado Springs, CO", category: "peaks", desc: "America's Mountain — drive or hike to the top.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Pikes_Peak_from_above.jpg/640px-Pikes_Peak_from_above.jpg" },
-    { name: "Old Town Breckenridge", location: "Breckenridge, CO", category: "towns", desc: "A historic gold mining town with great shops.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Breckenridge_Colorado.jpg/640px-Breckenridge_Colorado.jpg" },
-    { name: "Telluride", location: "Telluride, CO", category: "towns", desc: "A beautiful mountain town in a box canyon.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Telluride_Colorado.jpg/640px-Telluride_Colorado.jpg" }
+    { name: "Vail Ski Resort", location: "Vail, CO", category: "skiing", desc: "World famous back bowls and great terrain.", img: "https://picsum.photos/seed/vail/600/400" },
+    { name: "Breckenridge", location: "Breckenridge, CO", category: "skiing", desc: "Highest chairlift in North America.", img: "https://picsum.photos/seed/breck/600/400" },
+    { name: "Maroon Bells", location: "Aspen, CO", category: "hiking", desc: "Most photographed mountains in North America.", img: "https://picsum.photos/seed/maroon/600/400" },
+    { name: "Rocky Mountain NP", location: "Estes Park, CO", category: "hiking", desc: "Stunning national park with amazing wildlife.", img: "https://picsum.photos/seed/rocky/600/400" },
+    { name: "Mount Elbert", location: "Leadville, CO", category: "peaks", desc: "Highest peak in the Rockies at 14,439 ft.", img: "https://picsum.photos/seed/elbert/600/400" },
+    { name: "Pikes Peak", location: "Colorado Springs, CO", category: "peaks", desc: "America's Mountain — drive or hike to the top.", img: "https://picsum.photos/seed/pikes/600/400" },
+    { name: "Old Town Breckenridge", location: "Breckenridge, CO", category: "towns", desc: "A historic gold mining town with great shops.", img: "https://picsum.photos/seed/oldtown/600/400" },
+    { name: "Telluride", location: "Telluride, CO", category: "towns", desc: "A beautiful mountain town in a box canyon.", img: "https://picsum.photos/seed/telluride/600/400" }
   ];
 
   function renderCards(list) {
     const gallery = document.getElementById('gallery');
     gallery.innerHTML = list.map(p => `
       <div class="card">
-        <img src="${p.img}" alt="${p.name}" onerror="this.src='https://via.placeholder.com/300x180?text=${p.name}'"/>
+        <img src="${p.img}" alt="${p.name}"/>
         <div class="card-info">
           <h3>${p.name}</h3>
           <p>${p.location}</p>
