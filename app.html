@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Colorado Mountain Explorer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1a3a6a;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    #navbar {
+      background-color: #0a1628;
+      padding: 12px 20px;
+    }
+
+    #navbar a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+    #header {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    #header h1 {
+      font-size: 2.5rem;
+    }
+
+    #filters {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .filter-btn {
+      background: white;
+      color: #1a3a6a;
+      border: none;
+      padding: 8px 18px;
+      margin: 5px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .filter-btn:hover {
+      background: #add8ff;
+    }
+
+    #gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      color: #222;
+      border-radius: 10px;
+      width: 300px;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-info {
+      padding: 12px;
+    }
+
+    .card-info h3 {
+      margin: 0 0 6px;
+      font-size: 1rem;
+    }
+
+    .card-info p {
+      margin: 0;
+      font-size: 0.85rem;
+      color: #555;
+    }
+
+    #footer {
+      background-color: #0a1628;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    #footer a {
+      color: #add8ff;
+    }
+  </style>
+</head>
+<body>
+
+<div id="navbar">
+  <a href="index.html">Home</a>
+  <a href="scratch.html">Ski Page</a>
+</div>
+
+<div id="header">
+  <h1>Colorado Mountain Explorer</h1>
+  <p>Explore the scenery and destinations of Colorado</p>
+</div>
+
+<div id="filters">
+  <button class="filter-btn" onclick="filterCards('all')">All</button>
+  <button class="filter-btn" onclick="filterCards('skiing')">Skiing</button>
+  <button class="filter-btn" onclick="filterCards('hiking')">Hiking</button>
+  <button class="filter-btn" onclick="filterCards('peaks')">14ers</button>
+  <button class="filter-btn" onclick="filterCards('towns')">Towns</button>
+</div>
+
+<div id="gallery"></div>
+
+<div id="footer">
+  <p>IS 201 Final Project · <a href="index.html">Back to Home</a></p>
+</div>
+
+<script>
+  const places = [
+    { name: "Vail Ski Resort", location: "Vail, CO", category: "skiing", desc: "World famous back bowls and great terrain.", img: "https://images.unsplash.com/photo-1548099645-c5024e8ca5d5?w=600&q=80" },
+    { name: "Breckenridge", location: "Breckenridge, CO", category: "skiing", desc: "Highest chairlift in North America.", img: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&q=80" },
+    { name: "Maroon Bells", location: "Aspen, CO", category: "hiking", desc: "Most photographed mountains in North America.", img: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=600&q=80" },
+    { name: "Rocky Mountain NP", location: "Estes Park, CO", category: "hiking", desc: "Stunning national park with amazing wildlife.", img: "https://images.unsplash.com/photo-1441260038675-7329ab4cc264?w=600&q=80" },
+    { name: "Mount Elbert", location: "Leadville, CO", category: "peaks", desc: "Highest peak in the Rocky Mountains at 14,439 ft.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=600&q=80" },
+    { name: "Pikes Peak", location: "Colorado Springs, CO", category: "peaks", desc: "America's Mountain — drive or hike to the top.", img: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80" },
+    { name: "Old Town Breckenridge", location: "Breckenridge, CO", category: "towns", desc: "A historic gold mining town with great shops.", img: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80" },
+    { name: "Telluride", location: "Telluride, CO", category: "towns", desc: "A beautiful mountain town in a box canyon.", img: "https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=600&q=80" }
+  ];
+
+  function renderCards(list) {
+    const gallery = document.getElementById('gallery');
+    gallery.innerHTML = list.map(p => `
+      <div class="card">
+        <img src="${p.img}" alt="${p.name}"/>
+        <div class="card-info">
+          <h3>${p.name}</h3>
+          <p>${p.location}</p>
+          <p>${p.desc}</p>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function filterCards(cat) {
+    if (cat === 'all') {
+      renderCards(places);
+    } else {
+      renderCards(places.filter(p => p.category === cat));
+    }
+  }
+
+  renderCards(places);
+</script>
+
+</body>
+</html>
