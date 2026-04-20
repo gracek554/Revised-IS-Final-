@@ -11,32 +11,21 @@
       margin: 0;
       padding: 0;
     }
-
     #navbar {
       background-color: #0a1628;
       padding: 12px 20px;
     }
-
     #navbar a {
       color: white;
       text-decoration: none;
       margin-right: 20px;
     }
-
     #header {
       text-align: center;
       padding: 50px 20px;
     }
-
-    #header h1 {
-      font-size: 2.5rem;
-    }
-
-    #filters {
-      text-align: center;
-      padding: 20px;
-    }
-
+    #header h1 { font-size: 2.5rem; }
+    #filters { text-align: center; padding: 20px; }
     .filter-btn {
       background: white;
       color: #1a3a6a;
@@ -47,11 +36,7 @@
       cursor: pointer;
       font-size: 0.9rem;
     }
-
-    .filter-btn:hover {
-      background: #add8ff;
-    }
-
+    .filter-btn:hover { background: #add8ff; }
     #gallery {
       display: flex;
       flex-wrap: wrap;
@@ -61,7 +46,6 @@
       max-width: 1100px;
       margin: 0 auto;
     }
-
     .card {
       background: white;
       color: #222;
@@ -69,38 +53,21 @@
       width: 300px;
       overflow: hidden;
     }
-
     .card img {
       width: 100%;
       height: 180px;
       object-fit: cover;
     }
-
-    .card-info {
-      padding: 12px;
-    }
-
-    .card-info h3 {
-      margin: 0 0 6px;
-      font-size: 1rem;
-    }
-
-    .card-info p {
-      margin: 0;
-      font-size: 0.85rem;
-      color: #555;
-    }
-
+    .card-info { padding: 12px; }
+    .card-info h3 { margin: 0 0 6px; font-size: 1rem; }
+    .card-info p { margin: 0; font-size: 0.85rem; color: #555; }
     #footer {
       background-color: #0a1628;
       text-align: center;
       padding: 20px;
       margin-top: 40px;
     }
-
-    #footer a {
-      color: #add8ff;
-    }
+    #footer a { color: #add8ff; }
   </style>
 </head>
 <body>
@@ -131,21 +98,21 @@
 
 <script>
   const places = [
-    { name: "Vail Ski Resort", location: "Vail, CO", category: "skiing", desc: "World famous back bowls and great terrain.", img: "https://images.unsplash.com/photo-1548099645-c5024e8ca5d5?w=600&q=80" },
-    { name: "Breckenridge", location: "Breckenridge, CO", category: "skiing", desc: "Highest chairlift in North America.", img: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&q=80" },
-    { name: "Maroon Bells", location: "Aspen, CO", category: "hiking", desc: "Most photographed mountains in North America.", img: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=600&q=80" },
-    { name: "Rocky Mountain NP", location: "Estes Park, CO", category: "hiking", desc: "Stunning national park with amazing wildlife.", img: "https://images.unsplash.com/photo-1441260038675-7329ab4cc264?w=600&q=80" },
-    { name: "Mount Elbert", location: "Leadville, CO", category: "peaks", desc: "Highest peak in the Rocky Mountains at 14,439 ft.", img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=600&q=80" },
-    { name: "Pikes Peak", location: "Colorado Springs, CO", category: "peaks", desc: "America's Mountain — drive or hike to the top.", img: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80" },
-    { name: "Old Town Breckenridge", location: "Breckenridge, CO", category: "towns", desc: "A historic gold mining town with great shops.", img: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80" },
-    { name: "Telluride", location: "Telluride, CO", category: "towns", desc: "A beautiful mountain town in a box canyon.", img: "https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=600&q=80" }
+    { name: "Vail Ski Resort", location: "Vail, CO", category: "skiing", desc: "World famous back bowls and great terrain.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Vail_ski_area.jpg/640px-Vail_ski_area.jpg" },
+    { name: "Breckenridge", location: "Breckenridge, CO", category: "skiing", desc: "Highest chairlift in North America.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Breckenridge_Ski_Resort.jpg/640px-Breckenridge_Ski_Resort.jpg" },
+    { name: "Maroon Bells", location: "Aspen, CO", category: "hiking", desc: "Most photographed mountains in North America.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Maroon_Bells_Edit_2.jpg/640px-Maroon_Bells_Edit_2.jpg" },
+    { name: "Rocky Mountain NP", location: "Estes Park, CO", category: "hiking", desc: "Stunning national park with amazing wildlife.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Rocky_Mountain_National_Park_in_September_2011_-_Glacier_Gorge.jpg/640px-Rocky_Mountain_National_Park_in_September_2011_-_Glacier_Gorge.jpg" },
+    { name: "Mount Elbert", location: "Leadville, CO", category: "peaks", desc: "Highest peak in the Rocky Mountains at 14,439 ft.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Mount_Elbert.jpg/640px-Mount_Elbert.jpg" },
+    { name: "Pikes Peak", location: "Colorado Springs, CO", category: "peaks", desc: "America's Mountain — drive or hike to the top.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Pikes_Peak_from_above.jpg/640px-Pikes_Peak_from_above.jpg" },
+    { name: "Old Town Breckenridge", location: "Breckenridge, CO", category: "towns", desc: "A historic gold mining town with great shops.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Breckenridge_Colorado.jpg/640px-Breckenridge_Colorado.jpg" },
+    { name: "Telluride", location: "Telluride, CO", category: "towns", desc: "A beautiful mountain town in a box canyon.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Telluride_Colorado.jpg/640px-Telluride_Colorado.jpg" }
   ];
 
   function renderCards(list) {
     const gallery = document.getElementById('gallery');
     gallery.innerHTML = list.map(p => `
       <div class="card">
-        <img src="${p.img}" alt="${p.name}"/>
+        <img src="${p.img}" alt="${p.name}" onerror="this.src='https://via.placeholder.com/300x180?text=${p.name}'"/>
         <div class="card-info">
           <h3>${p.name}</h3>
           <p>${p.location}</p>
