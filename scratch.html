@@ -9,6 +9,10 @@
 
 <div id="navbar">
   <a href="index.html">Home</a>
+  <a href="#intro">About</a>
+  <a href="#resorts">Resorts</a>
+  <a href="#video">Video</a>
+  <a href="#tableau">Data</a>
   <a href="app.html">Colorado Skiing</a>
 </div>
 
@@ -17,12 +21,15 @@
   <p>Utah and Colorado mountains are my happy place</p>
 </div>
 
+<!-- ON PAGE ANCHOR -->
+<a name="intro"></a>
 <div id="intro">
   <h2>Why I Ski</h2>
   <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&q=80" alt="Skiing"/>
   <p>Skiing is one of my favorite hobbies. There is nothing better than fresh powder and a clear blue sky in the mountains of Utah or Colorado.</p>
 </div>
 
+<a name="resorts"></a>
 <div id="resorts">
   <h2>My Top Resorts</h2>
   <ol>
@@ -51,6 +58,32 @@
       </ul>
     </li>
   </ol>
+</div>
+
+<!-- YOUTUBE VIDEO -->
+<a name="video"></a>
+<div id="video">
+  <h2>Skiing Video</h2>
+  <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/UbKbGMVH_3I"
+    title="Skiing Video"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<!-- TABLEAU -->
+<a name="tableau"></a>
+<div id="tableau">
+  <h2>Ski Resort Data</h2>
+  <p>Interactive data on ski resorts across the US:</p>
+  <tableau-viz id="tableauViz"
+    src="https://public.tableau.com/views/NorthAmericanSkiResorts/Dashboard1"
+    width="800"
+    height="500"
+    toolbar="bottom"
+    hide-tabs>
+  </tableau-viz>
+  <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
 </div>
 
 <div id="footer">
