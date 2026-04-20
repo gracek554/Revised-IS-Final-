@@ -21,7 +21,6 @@
   <p>Utah and Colorado mountains are my happy place</p>
 </div>
 
-<!-- ON PAGE ANCHOR -->
 <a name="intro"></a>
 <div id="intro">
   <h2>Why I Ski</h2>
@@ -60,7 +59,6 @@
   </ol>
 </div>
 
-<!-- YOUTUBE VIDEO -->
 <a name="video"></a>
 <div id="video">
   <h2>Skiing Video</h2>
@@ -71,19 +69,39 @@
   </iframe>
 </div>
 
-<!-- TABLEAU -->
 <a name="tableau"></a>
 <div id="tableau">
   <h2>Ski Resort Data</h2>
-  <p>Interactive data on ski resorts across the US:</p>
-  <tableau-viz id="tableauViz"
-    src="https://public.tableau.com/views/NorthAmericanSkiResorts/Dashboard1"
-    width="800"
-    height="500"
-    toolbar="bottom"
-    hide-tabs>
-  </tableau-viz>
-  <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+  <p>Interactive data on skiing:</p>
+  <div class='tableauPlaceholder' id='viz1776712515996' style='position: relative'>
+    <noscript>
+      <a href='#'><img alt='Sheet 2' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sk&#47;Skiing&#47;Sheet2&#47;1_rss.png' style='border: none' /></a>
+    </noscript>
+    <object class='tableauViz' style='display:none;'>
+      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+      <param name='embed_code_version' value='3' />
+      <param name='site_root' value='' />
+      <param name='name' value='Skiing&#47;Sheet2' />
+      <param name='tabs' value='no' />
+      <param name='toolbar' value='yes' />
+      <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sk&#47;Skiing&#47;Sheet2&#47;1.png' />
+      <param name='animate_transition' value='yes' />
+      <param name='display_static_image' value='yes' />
+      <param name='display_spinner' value='yes' />
+      <param name='display_overlay' value='yes' />
+      <param name='display_count' value='yes' />
+      <param name='language' value='en-US' />
+    </object>
+  </div>
+  <script type='text/javascript'>
+    var divElement = document.getElementById('viz1776712515996');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    vizElement.style.width='100%';
+    vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
 </div>
 
 <div id="footer">
